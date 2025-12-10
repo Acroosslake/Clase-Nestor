@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Herencia en PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            padding: 40px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: auto;
+            background: #020617;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #f97316;
+            color: #020617;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ea580c;
+        }
+
+        .contenido {
+            background: #020617;
+            border: 1px solid #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            min-height: 200px;
+            white-space: pre-line;
+        }
+
+        code {
+            background: #020617;
+            display: block;
+            padding: 15px;
+            border-radius: 10px;
+            color: #fb923c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <h1>Herencia en PHP</h1>
+
+    <div class="botones">
+        <button onclick="mostrarDefinicion()">¿Qué es?</button>
+        <button onclick="mostrarCodigo()">Código PHP</button>
+        <button onclick="mostrarEjemplo()">Ejemplo explicado</button>
+    </div>
+
+    <div class="contenido" id="contenido">
+        Selecciona una opción para mostrar información.
+    </div>
+</div>
+
+<script>
+    function mostrarDefinicion() {
+        document.getElementById("contenido").innerHTML = `
+La herencia en PHP es un principio de la Programación Orientada a Objetos que permite que una clase hija herede los atributos y métodos de una clase padre.
+
+✅ Permite reutilizar código  
+✅ Facilita la escalabilidad  
+✅ Evita duplicar funciones  
+✅ Permite crear jerarquías de clases
+        `;
+    }
+
+    function mostrarCodigo() {
+        document.getElementById("contenido").innerHTML = `
+<code>
+&lt;?php
+
+class Persona {
+    public $nombre;
+
+    public function saludar() {
+        return "Hola, mi nombre es " . $this->nombre;
+    }
+}
+
+class Estudiante extends Persona {
+    public function estudiar() {
+        return "Estoy estudiando programación";
+    }
+}
+
+$estudiante = new Estudiante();
+$estudiante->nombre = "Juan";
+
+echo $estudiante->saludar();
+echo "&lt;br&gt;";
+echo $estudiante->estudiar();
+
+?&gt;
+</code>
+        `;
+    }
+
+    function mostrarEjemplo() {
+        document.getElementById("contenido").innerHTML = `
+🔹 La clase Persona es la clase padre.
+🔹 La clase Estudiante es la clase hija.
+🔹 Estudiante hereda el atributo nombre.
+🔹 Estudiante puede usar el método saludar().
+🔹 También tiene su propio método estudiar().
+🔹 Salida final:
+   Hola, mi nombre es Juan
+   Estoy estudiando programación
+        `;
+    }
+</script>
+
+</body>
+</html>

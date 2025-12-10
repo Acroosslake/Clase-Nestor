@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobrecarga de Métodos en PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            padding: 40px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: auto;
+            background: #020617;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #e11d48;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #be123c;
+        }
+
+        .contenido {
+            background: #020617;
+            border: 1px solid #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            min-height: 200px;
+            white-space: pre-line;
+        }
+
+        code {
+            background: #020617;
+            display: block;
+            padding: 15px;
+            border-radius: 10px;
+            color: #fb7185;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <h1>Sobrecarga de Métodos en PHP</h1>
+
+    <div class="botones">
+        <button onclick="mostrarDefinicion()">¿Qué es?</button>
+        <button onclick="mostrarCodigo()">Código PHP</button>
+        <button onclick="mostrarEjemplo()">Ejemplo explicado</button>
+    </div>
+
+    <div class="contenido" id="contenido">
+        Selecciona una opción para mostrar información.
+    </div>
+</div>
+
+<script>
+    function mostrarDefinicion() {
+        document.getElementById("contenido").innerHTML = `
+La sobrecarga de métodos es la capacidad de definir un mismo método con diferentes parámetros para que actúe de distintas formas según los datos recibidos.
+
+⚠️ En PHP no existe sobrecarga tradicional como en Java, pero se puede simular usando:
+
+✅ Valores por defecto  
+✅ Funciones mágicas como __call()
+        `;
+    }
+
+    function mostrarCodigo() {
+        document.getElementById("contenido").innerHTML = `
+<code>
+&lt;?php
+
+class Calculadora {
+
+    public function sumar(...$numeros) {
+        $suma = 0;
+        foreach ($numeros as $num) {
+            $suma += $num;
+        }
+        return $suma;
+    }
+}
+
+$calc = new Calculadora();
+
+echo $calc->sumar(5, 10) . "&lt;br&gt;";
+echo $calc->sumar(1, 2, 3, 4);
+
+?&gt;
+</code>
+        `;
+    }
+
+    function mostrarEjemplo() {
+        document.getElementById("contenido").innerHTML = `
+🔹 El método sumar() recibe cualquier cantidad de números.
+🔹 Puede sumar 2, 3 o más valores.
+🔹 Se comporta de manera diferente según los parámetros recibidos.
+🔹 Salida del programa:
+   15
+   10
+        `;
+    }
+</script>
+
+</body>
+</html>

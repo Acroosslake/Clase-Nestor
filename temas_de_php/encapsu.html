@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Abstracción en PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            padding: 40px;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: auto;
+            background: #020617;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .contenido {
+            background: #020617;
+            border: 1px solid #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            min-height: 200px;
+            white-space: pre-line;
+        }
+
+        code {
+            background: #020617;
+            display: block;
+            padding: 15px;
+            border-radius: 10px;
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <h1>Abstracción en PHP</h1>
+
+    <div class="botones">
+        <button onclick="mostrarDefinicion()">¿Qué es?</button>
+        <button onclick="mostrarCodigo()">Código PHP</button>
+        <button onclick="mostrarEjemplo()">Ejemplo explicado</button>
+    </div>
+
+    <div class="contenido" id="contenido">
+        Selecciona una opción para mostrar información.
+    </div>
+</div>
+
+<script>
+    function mostrarDefinicion() {
+        document.getElementById("contenido").innerHTML = `
+La abstracción en PHP es un concepto de la Programación Orientada a Objetos que permite crear clases incompletas mediante clases abstractas.
+
+Estas clases sirven como base para que otras clases hereden sus métodos, obligando a que se implementen.
+
+✅ Permite ocultar detalles internos  
+✅ Define comportamientos obligatorios  
+✅ Facilita el mantenimiento del código
+        `;
+    }
+
+    function mostrarCodigo() {
+        document.getElementById("contenido").innerHTML = `
+<code>
+&lt;?php
+
+abstract class Animal {
+    abstract public function hacerSonido();
+}
+
+class Perro extends Animal {
+    public function hacerSonido() {
+        return "Guau";
+    }
+}
+
+$perro = new Perro();
+echo $perro->hacerSonido();
+
+?&gt;
+</code>
+        `;
+    }
+
+    function mostrarEjemplo() {
+        document.getElementById("contenido").innerHTML = `
+🔹 La clase Animal es abstracta, no se puede instanciar directamente.
+🔹 El método hacerSonido() es obligatorio para las clases hijas.
+🔹 Perro hereda de Animal y está obligada a implementar hacerSonido().
+🔹 Cuando se ejecuta el programa, imprime: "Guau".
+        `;
+    }
+</script>
+
+</body>
+</html>
