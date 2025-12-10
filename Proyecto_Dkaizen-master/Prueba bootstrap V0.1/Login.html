@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        body{
+            background: linear-gradient(to right, #ff0000, #000000);
+        }
+    </style>
+
+</head>
+<body>
+
+   <div class="container w-75 mt-5 rounded shadow">
+    <div class="row align-items-stretch">
+        <div class="col d-flex justify-content-center align-items-center bg-light">
+            <img src="imagenes/logo.jpg" alt="Logo" style="max-width: 420px; width: 100%; height: auto;">
+        </div>
+        <div class="col bg-transparent">
+            <h2 class="fw-bold text-center py-5 text-white">Bienvenido de vuelta</h2>
+
+            <form id="loginForm" novalidate>
+                <div class="mb-3">
+                    <label for="email" class="form-label text-white">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                    <div id="emailError" class="form-text text-danger"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label text-white">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+                    <div id="passwordError" class="form-text text-danger"></div>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                    <label class="form-check-label text-white" for="remember">Mantener sesión</label>
+                </div>
+
+                <div class="d-grid mt-3">
+                    <button type="submit" class="btn btn-danger">Iniciar sesión</button>
+                </div>
+
+                <div class="my-3 text-center">
+                    <span class="text-white">¿No tienes cuenta? <a href="crear cuenta.html">Crea una ahora</a></span><br>
+                    <span><a href="Recuperacion de cuenta.html">¿Has olvidado tu contraseña?</a></span>
+                </div>
+            </form>
+
+        </div>
+    </div>
+   </div>
+
+
+    <script>
+        (function(){
+            const form = document.getElementById('loginForm');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+
+            function validateEmail(email){
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                let valid = true;
+                emailError.textContent = '';
+                passwordError.textContent = '';
+
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+
+                if(!email){
+                    emailError.textContent = 'Introduce tu correo electrónico.';
+                    valid = false;
+                } else if(!validateEmail(email)){
+                    emailError.textContent = 'Formato de correo no válido.';
+                    valid = false;
+                }
+
+                if(!password){
+                    passwordError.textContent = 'Introduce la contraseña.';
+                    valid = false;
+                } else if(password.length < 6){
+                    passwordError.textContent = 'La contraseña debe tener al menos 6 caracteres.';
+                    valid = false;
+                }
+
+                if(!valid) return;
+
+                // Si tuvieras un endpoint, aquí harías fetch POST a la API para verificar credenciales.
+                // Por ahora simulamos éxito y redirigimos a Home.html
+                window.location.href = 'Home.html';
+            });
+        })();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
