@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="5.97" multi-file="no">
+  <meta>
+    <name>Project</name>
+    <authors> </authors>
+    <description />
+  </meta>
+  <management>
+    <persons>
+      <person id="Pba2b5cedf1a349c2938fd18ced89619a">
+        <first-name />
+        <last-name />
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <tasks />
+    <requirements />
+    <issues />
+    <to-dos />
+  </management>
+  <glossary />
+  <types>
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="Date" name="Date" description="" />
+      <type id="Void" name="Void" description="" />
+      <type id="Array" name="Array" description="" />
+      <type id="string" name="string" description="" />
+    </custom-types>
+  </types>
+  <filters />
+  <items />
+  <models>
+    <model id="p430433072486136733" name="Model 1" type="model" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>11/05/2025 19:40:05</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <tagged-values />
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="p664286557703524672" name="ClassDiagram1" order-index="1" show-nullability="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>11/05/2025 19:40:05</creation-date>
+          <change-date>11/05/2025 19:40:05</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <tagged-values />
+        <abstract-items />
+        <layer name="Default" visible="true" enabled="true" locked="false" />
+      </diagram>
+    </model>
+    <model id="p102990355725296726" name="Model 1" type="model" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>11/05/2025 19:41:44</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <tagged-values />
+      <abstract-items>
+        <item id="di731395504539906162" cid="C001" type="class" name="Persona" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="11/05/2025 19:41:44">
+          <stereotypes />
+          <tagged-values />
+          <associated-diagrams />
+          <owned-items />
+          <style class="default" />
+          <attributes>
+            <attribute id="a1ee149d2e6704dd48afd1f591501238f796" name="nombre" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false">
+              <stereotypes />
+            </attribute>
+            <attribute id="a9ae79ae975fb4f10a58f7d3578b95164564" name="apellido" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false">
+              <stereotypes />
+            </attribute>
+            <attribute id="ad94e4429dd184461bfc9d9ab1f8116f729" name="fechaNacimiento" type="Date" type-id="Date" visibility="private" abstract="false" virtual="false">
+              <stereotypes />
+            </attribute>
+            <attribute id="a2bf23bb654874a439a876e99281f19a7572" name="edad" type="Integer" type-id="Uml.Integer" visibility="private" abstract="false" virtual="false">
+              <stereotypes />
+            </attribute>
+            <attribute id="ae502a7cd035a432399c8b2ea89f0eb03738" name="email" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false">
+              <stereotypes />
+            </attribute>
+            <attribute id="a54b1836fe5e14c4c99d3725cdb9a29db311" name="telefono" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false">
+              <stereotypes />
+            </attribute>
+            <attribute id="a247d4236689a4f8e8d5f8656564ffd5a719" name="genero" type="String" type-id="Uml.String" visibility="private" abstract="false" virtual="false">
+              <stereotypes />
+            </attribute>
+          </attributes>
+          <operations>
+            <operation id="o00a91216e0dc4de5bac1badef8177bb3371" name="Persona" type="" type-id="" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters>
+                <parameter id="" name="nombre" type="String" type-id="Uml.String" default-value="" />
+                <parameter id="" name="apellido" type="String" type-id="Uml.String" default-value="" />
+                <parameter id="" name="fechaNacimiento" type="Date" type-id="Date" default-value="" />
+                <parameter id="" name="email" type="String" type-id="Uml.String" default-value="" />
+                <parameter id="" name="telefono" type="String" type-id="Uml.String" default-value="" />
+                <parameter id="" name="genero" type="String" type-id="Uml.String" default-value="" />
+              </parameters>
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o10a91216e0dc4de5bac1badef8177bb3371" name="calcularEdad" type="Void" type-id="Void" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o20a91216e0dc4de5bac1badef8177bb3371" name="getNombre" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o30a91216e0dc4de5bac1badef8177bb3371" name="getApellido" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o40a91216e0dc4de5bac1badef8177bb3371" name="getNombreCompleto" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o50a91216e0dc4de5bac1badef8177bb3371" name="getFechaNacimiento" type="Date" type-id="Date" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o60a91216e0dc4de5bac1badef8177bb3371" name="getEdad" type="Integer" type-id="Uml.Integer" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o70a91216e0dc4de5bac1badef8177bb3371" name="getEmail" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o80a91216e0dc4de5bac1badef8177bb3371" name="getTelefono" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o90a91216e0dc4de5bac1badef8177bb3371" name="getGenero" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o100a91216e0dc4de5bac1badef8177bb3371" name="getGeneroTexto" type="String" type-id="Uml.String" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o110a91216e0dc4de5bac1badef8177bb3371" name="comer" type="string" type-id="string" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o120a91216e0dc4de5bac1badef8177bb3371" name="caminar" type="string" type-id="string" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o130a91216e0dc4de5bac1badef8177bb3371" name="hablar" type="string" type-id="string" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o140a91216e0dc4de5bac1badef8177bb3371" name="dormir" type="string" type-id="string" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+            <operation id="o150a91216e0dc4de5bac1badef8177bb3371" name="estudiar" type="string" type-id="string" visibility="public" abstract="false" virtual="false" static="false">
+              <parameters />
+              <stereotypes />
+              <source-codes />
+            </operation>
+          </operations>
+          <template-parameters>
+            <source-codes />
+          </template-parameters>
+        </item>
+      </abstract-items>
+      <sub-models />
+      <diagram type="uml-composite-structure" id="p686202300268979021" name="CompositeStructureDiagram1" order-index="1" show-nullability="false">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="vertical-linear" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>11/05/2025 19:41:47</creation-date>
+          <change-date>11/05/2025 19:41:47</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <tagged-values />
+        <abstract-items />
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di731395504539906162" iid="75b87f7adc5e446c92309e0baff96252" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" creation-date="11/05/2025 19:41:47" order-index="0" type="entity">
+            <layout ax="193" ay="-62" awidth="442" aheight="446" x="193" y="-62" width="442" height="446" angle="0" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+  <documents />
+  <document-templates />
+</sim-project>

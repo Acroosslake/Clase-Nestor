@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://www.omg.org/spec/UML/20090901" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+  <uml:Model xmi:id="p737448391509423069">
+    <name>PersonaModel</name>
+    <packagedElement xmi:id="p797598000547449093">
+      <packagedElement xmi:id="di731395504539906162" xmi:type="uml:Class">
+        <name>Persona</name>
+        <isAbstract>false</isAbstract>
+        <ownedAttribute xmi:id="a1ee149d2e6704dd48afd1f591501238f796" xmi:type="uml:Property">
+          <name>nombre</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Uml.String" />
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a9ae79ae975fb4f10a58f7d3578b95164564" xmi:type="uml:Property">
+          <name>apellido</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Uml.String" />
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ad94e4429dd184461bfc9d9ab1f8116f729" xmi:type="uml:Property">
+          <name>fechaNacimiento</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Date" />
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a2bf23bb654874a439a876e99281f19a7572" xmi:type="uml:Property">
+          <name>edad</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Uml.Integer" />
+        </ownedAttribute>
+        <ownedAttribute xmi:id="ae502a7cd035a432399c8b2ea89f0eb03738" xmi:type="uml:Property">
+          <name>email</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Uml.String" />
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a54b1836fe5e14c4c99d3725cdb9a29db311" xmi:type="uml:Property">
+          <name>telefono</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Uml.String" />
+        </ownedAttribute>
+        <ownedAttribute xmi:id="a247d4236689a4f8e8d5f8656564ffd5a719" xmi:type="uml:Property">
+          <name>genero</name>
+          <visibility>private</visibility>
+          <type xmi:idref="Uml.String" />
+        </ownedAttribute>
+        
+        <!-- Constructor -->
+        <ownedOperation xmi:id="o00a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>__construct</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="p1" xmi:type="uml:Parameter">
+            <name>nombre</name>
+            <type xmi:idref="Uml.String"/>
+            <direction>in</direction>
+          </ownedParameter>
+          <ownedParameter xmi:id="p2" xmi:type="uml:Parameter">
+            <name>apellido</name>
+            <type xmi:idref="Uml.String"/>
+            <direction>in</direction>
+          </ownedParameter>
+          <ownedParameter xmi:id="p3" xmi:type="uml:Parameter">
+            <name>fechaNacimiento</name>
+            <type xmi:idref="Date"/>
+            <direction>in</direction>
+          </ownedParameter>
+          <ownedParameter xmi:id="p4" xmi:type="uml:Parameter">
+            <name>email</name>
+            <type xmi:idref="Uml.String"/>
+            <direction>in</direction>
+          </ownedParameter>
+          <ownedParameter xmi:id="p5" xmi:type="uml:Parameter">
+            <name>telefono</name>
+            <type xmi:idref="Uml.String"/>
+            <direction>in</direction>
+          </ownedParameter>
+          <ownedParameter xmi:id="p6" xmi:type="uml:Parameter">
+            <name>genero</name>
+            <type xmi:idref="Uml.String"/>
+            <direction>in</direction>
+          </ownedParameter>
+          <ownedParameter xmi:id="o00a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <!-- Método privado calcularEdad -->
+        <ownedOperation xmi:id="o10a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>calcularEdad</name>
+          <visibility>private</visibility>
+          <ownedParameter xmi:id="o10a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.Void"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <!-- Getters -->
+        <ownedOperation xmi:id="o20a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getNombre</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o20a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.String"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o30a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getApellido</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o30a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.String"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o40a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getNombreCompleto</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o40a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.String"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o50a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getFechaNacimiento</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o50a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Date"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o60a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getEdad</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o60a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o70a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getEmail</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o70a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.String"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o80a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getTelefono</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o80a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.String"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o90a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getGenero</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o90a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.String"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o100a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>getGeneroTexto</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o100a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.String"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <!-- Métodos de acción que retornan array -->
+        <ownedOperation xmi:id="o110a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>comer</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o110a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.Array"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o120a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>caminar</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o120a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.Array"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o130a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>hablar</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o130a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.Array"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o140a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>dormir</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o140a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.Array"/>
+          </ownedParameter>
+        </ownedOperation>
+        
+        <ownedOperation xmi:id="o150a91216e0dc4de5bac1badef8177bb3371" xmi:type="uml:Operation">
+          <name>estudiar</name>
+          <visibility>public</visibility>
+          <ownedParameter xmi:id="o150a91216e0dc4de5bac1badef8177bb3371_ret" xmi:type="uml:Parameter">
+            <name>return</name>
+            <direction>return</direction>
+            <type xmi:idref="Uml.Array"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    
+    <!-- Definición de tipos de datos -->
+    <packagedElement xmi:id="Uml.Integer" xmi:type="uml:DataType">
+      <name>Integer</name>
+    </packagedElement>
+    <packagedElement xmi:id="Uml.String" xmi:type="uml:DataType">
+      <name>String</name>
+    </packagedElement>
+    <packagedElement xmi:id="Date" xmi:type="uml:DataType">
+      <name>Date</name>
+    </packagedElement>
+    <packagedElement xmi:id="Uml.Array" xmi:type="uml:DataType">
+      <name>Array</name>
+    </packagedElement>
+    <packagedElement xmi:id="Uml.Void" xmi:type="uml:DataType">
+      <name>Void</name>
+    </packagedElement>
+  </uml:Model>
+</xmi:XMI>

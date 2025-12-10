@@ -1,0 +1,160 @@
+{
+  "_type": "Project",
+  "name": "PersonaClassDiagram",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "name": "PersonaModel",
+      "ownedElements": [
+        {
+          "_type": "UMLClass",
+          "name": "Persona",
+          "visibility": "public",
+          "attributes": [
+            {
+              "name": "nombre",
+              "type": "string",
+              "visibility": "private"
+            },
+            {
+              "name": "apellido",
+              "type": "string",
+              "visibility": "private"
+            },
+            {
+              "name": "fechaNacimiento",
+              "type": "string",
+              "visibility": "private"
+            },
+            {
+              "name": "edad",
+              "type": "int",
+              "visibility": "private"
+            },
+            {
+              "name": "email",
+              "type": "string",
+              "visibility": "private"
+            },
+            {
+              "name": "telefono",
+              "type": "string",
+              "visibility": "private"
+            },
+            {
+              "name": "genero",
+              "type": "string",
+              "visibility": "private"
+            }
+          ],
+          "operations": [
+            {
+              "name": "__construct",
+              "parameters": [
+                {
+                  "name": "nombre",
+                  "type": "string"
+                },
+                {
+                  "name": "apellido",
+                  "type": "string"
+                },
+                {
+                  "name": "fechaNacimiento",
+                  "type": "string"
+                },
+                {
+                  "name": "email",
+                  "type": "string"
+                },
+                {
+                  "name": "telefono",
+                  "type": "string"
+                },
+                {
+                  "name": "genero",
+                  "type": "string"
+                }
+              ],
+              "visibility": "public"
+            },
+            {
+              "name": "calcularEdad",
+              "visibility": "private"
+            },
+            {
+              "name": "getNombre",
+              "returnType": "string",
+              "visibility": "public"
+            },
+            {
+              "name": "getApellido",
+              "returnType": "string",
+              "visibility": "public"
+            },
+            {
+              "name": "getNombreCompleto",
+              "returnType": "string",
+              "visibility": "public"
+            },
+            {
+              "name": "getFechaNacimiento",
+              "returnType": "string",
+              "visibility": "public"
+            },
+            {
+              "name": "getEdad",
+              "returnType": "int",
+              "visibility": "public"
+            },
+            {
+              "name": "getEmail",
+              "returnType": "string",
+              "visibility": "public"
+            },
+            {
+              "name": "getTelefono",
+              "returnType": "string",
+              "visibility": "public"
+            },
+            {
+              "name": "getGenero",
+              "returnType": "string",
+              "visibility": "public"
+            },
+            {
+              "name": "getGeneroTexto",
+              "returnType": "string",
+              "visibility": "public"
+            },
+            {
+              "name": "comer",
+              "returnType": "array",
+              "visibility": "public"
+            },
+            {
+              "name": "caminar",
+              "returnType": "array",
+              "visibility": "public"
+            },
+            {
+              "name": "hablar",
+              "returnType": "array",
+              "visibility": "public"
+            },
+            {
+              "name": "dormir",
+              "returnType": "array",
+              "visibility": "public"
+            },
+            {
+              "name": "estudiar",
+              "returnType": "array",
+              "visibility": "public"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
